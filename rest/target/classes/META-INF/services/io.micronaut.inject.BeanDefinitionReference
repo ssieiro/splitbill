@@ -1,0 +1,4 @@
+com.autentia.example.splitbill.delivery.rest.$UserControllerDefinitionClass
+com.autentia.example.splitbill.delivery.rest.$GroupControllerDefinitionClass
+com.autentia.example.splitbill.delivery.rest.$GroupPaymentControllerDefinitionClass
+com.autentia.example.splitbill.security.$AuthenticationProviderUserPasswordDefinitionClass

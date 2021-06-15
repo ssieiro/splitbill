@@ -1,0 +1,52 @@
+create table audit_log
+(
+    id           integer primary key generated always as identity,
+    timestamp    timestamp      not null,
+    elapsed_time bigint         not null,
+    user_id      varchar(50)    not null,
+    use_case     varchar(256)   not null,
+    read_only    boolean        not null,
+    success      boolean        not null,
+    arguments    varchar(16384) not null,
+    result       varchar(16384) not null
+);
+
+-- USERS
+CREATE TABLE USERS (
+    USER_ID     VARCHAR(25) NOT NULL,
+    USER_NAME   VARCHAR(250) NOT NULL,
+    USER_PWD    VARCHAR(25),
+    CONSTRAINT USERS_PK PRIMARY KEY (USER_ID)
+);
+
+-- GROUPS
+CREATE TABLE GROUPS (
+   GROUP_ID     INTEGER NOT NULL,
+   GROUP_NAME   VARCHAR(250) NOT NULL,
+   CONSTRAINT GRUPOS_PK PRIMARY KEY (GROUP_ID)
+);
+
+-- USERS_GROUPS RELATION
+CREATE TABLE USERS_GROUPS (
+    GROUP_ID    INTEGER NOT NULL,
+    USER_ID     VARCHAR(25) NOT NULL,
+    CONSTRAINT USERS_GROUPS_PK PRIMARY KEY (GROUP_ID, USER_ID),
+    CONSTRAINT USERS_GROUPS_GROUPS_FK FOREIGN KEY(GROUP_ID) REFERENCES GROUPS(GROUP_ID),
+    CONSTRAINT USERS_GROUPS_USERS_FK FOREIGN KEY(USER_ID) REFERENCES USERS(USER_ID)
+);
+
+-- PAYMENTS IN A GROUP
+-- PAYMENTS IN A GROUP
+CREATE TABLE GROUP_PAYMENTS (
+    GROUP_ID        INTEGER NOT NULL,
+    USER_ID         VARCHAR(25) NOT NULL,
+    PAYMENT_TS      TIMESTAMP NOT NULL,
+    DESCRIPTION     VARCHAR(255),
+    AMOUNT          NUMERIC(9,2) NOT NULL,
+    PAYED_TO        VARCHAR(25),
+    CONSTRAINT GROUP_PAYMENTS_PK        PRIMARY KEY (GROUP_ID, USER_ID, PAYMENT_TS),
+    CONSTRAINT GROUP_PAYMENTS_USERS_GROUPS_FK FOREIGN KEY (GROUP_ID, USER_ID) REFERENCES USERS_GROUPS(GROUP_ID, USER_ID)
+);
+
+CREATE INDEX GROUP_PAYMENTS_IDX02 ON GROUP_PAYMENTS(USER_ID, GROUP_ID);
+

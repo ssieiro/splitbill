@@ -1,0 +1,63 @@
+archimedes-it-db> The files belonging to this database system will be owned by user "postgres".
+archimedes-it-db> This user must also own the server process.
+archimedes-it-db> 
+archimedes-it-db> The database cluster will be initialized with locale "en_US.utf8".
+archimedes-it-db> The default database encoding has accordingly been set to "UTF8".
+archimedes-it-db> The default text search configuration will be set to "english".
+archimedes-it-db> 
+archimedes-it-db> Data page checksums are disabled.
+archimedes-it-db> 
+archimedes-it-db> fixing permissions on existing directory /var/lib/postgresql/data ... ok
+archimedes-it-db> creating subdirectories ... ok
+archimedes-it-db> selecting default max_connections ... 100
+archimedes-it-db> selecting default shared_buffers ... 128MB
+archimedes-it-db> selecting default timezone ... UTC
+archimedes-it-db> selecting dynamic shared memory implementation ... posix
+archimedes-it-db> creating configuration files ... ok
+archimedes-it-db> running bootstrap script ... ok
+archimedes-it-db> sh: locale: not found
+archimedes-it-db> 2021-06-15 15:07:54.518 UTC [31] WARNING:  no usable system locales were found
+archimedes-it-db> performing post-bootstrap initialization ... ok
+archimedes-it-db> syncing data to disk ... ok
+archimedes-it-db> 
+archimedes-it-db> Success. You can now start the database server using:
+archimedes-it-db> 
+archimedes-it-db>     pg_ctl -D /var/lib/postgresql/data -l logfile start
+archimedes-it-db> 
+archimedes-it-db> 
+archimedes-it-db> WARNING: enabling "trust" authentication for local connections
+archimedes-it-db> You can change this by editing pg_hba.conf or using the option -A, or
+archimedes-it-db> --auth-local and --auth-host, the next time you run initdb.
+archimedes-it-db> waiting for server to start....2021-06-15 15:07:55.183 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+archimedes-it-db> 2021-06-15 15:07:55.194 UTC [37] LOG:  database system was shut down at 2021-06-15 15:07:54 UTC
+archimedes-it-db> 2021-06-15 15:07:55.198 UTC [36] LOG:  database system is ready to accept connections
+archimedes-it-db>  done
+archimedes-it-db> server started
+archimedes-it-db> CREATE DATABASE
+archimedes-it-db> 
+archimedes-it-db> 
+archimedes-it-db> /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+archimedes-it-db> 
+archimedes-it-db> 2021-06-15 15:07:55.579 UTC [36] LOG:  received fast shutdown request
+archimedes-it-db> waiting for server to shut down....2021-06-15 15:07:55.581 UTC [36] LOG:  aborting any active transactions
+archimedes-it-db> 2021-06-15 15:07:55.583 UTC [36] LOG:  worker process: logical replication launcher (PID 43) exited with exit code 1
+archimedes-it-db> 2021-06-15 15:07:55.583 UTC [38] LOG:  shutting down
+archimedes-it-db> 2021-06-15 15:07:55.597 UTC [36] LOG:  database system is shut down
+archimedes-it-db>  done
+archimedes-it-db> server stopped
+archimedes-it-db> 
+archimedes-it-db> PostgreSQL init process complete; ready for start up.
+archimedes-it-db> 
+archimedes-it-db> 2021-06-15 15:07:55.694 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+archimedes-it-db> 2021-06-15 15:07:55.694 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+archimedes-it-db> 2021-06-15 15:07:55.698 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+archimedes-it-db> 2021-06-15 15:07:55.713 UTC [50] LOG:  database system was shut down at 2021-06-15 15:07:55 UTC
+archimedes-it-db> 2021-06-15 15:07:55.717 UTC [1] LOG:  database system is ready to accept connections
+archimedes-it-db> 2021-06-15 15:07:58.455 UTC [57] ERROR:  duplicate key value violates unique constraint "users_groups_pk"
+archimedes-it-db> 2021-06-15 15:07:58.455 UTC [57] DETAIL:  Key (group_id, user_id)=(1, carlos) already exists.
+archimedes-it-db> 2021-06-15 15:07:58.455 UTC [57] STATEMENT:  INSERT INTO "users_groups" ("group_id","user_id") VALUES ($1,$2)
+archimedes-it-db> 2021-06-15 15:08:00.328 UTC [1] LOG:  received fast shutdown request
+archimedes-it-db> 2021-06-15 15:08:00.329 UTC [1] LOG:  aborting any active transactions
+archimedes-it-db> 2021-06-15 15:08:00.330 UTC [1] LOG:  worker process: logical replication launcher (PID 56) exited with exit code 1
+archimedes-it-db> 2021-06-15 15:08:00.331 UTC [51] LOG:  shutting down
+archimedes-it-db> 2021-06-15 15:08:00.358 UTC [1] LOG:  database system is shut down

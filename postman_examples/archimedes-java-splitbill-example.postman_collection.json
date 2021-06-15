@@ -1,0 +1,411 @@
+{
+  "info": {
+    "_postman_id": "4442e2fa-97c1-45cc-b8c5-b31dfe1809db",
+    "name": "Archimedes-Example",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Payment_Carlos",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "carlos123",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "carlos",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"groupId\": 1,\n    \"description\": \"Pagar regalo\", \n    \"amount\": \"50.0\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/splitbill/groups/1/payments",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "splitbill",
+                "groups",
+                "1",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment_Juan",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "juan123",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "juan",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"groupId\": 1,\n    \"amount\": \"30.0\",\n    \"description\": \"Pagando\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/splitbill/groups/1/payments",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "splitbill",
+                "groups",
+                "1",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment_Pedro_to_Carlos",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "pedro123",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "pedro",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"groupId\": 1,\n    \"amount\": \"30\",\n    \"description\": \"Pagandoooo\",\n    \"payedTo\": \"carlos\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/splitbill/groups/1/payments",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "splitbill",
+                "groups",
+                "1",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment_John",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "doe",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "john",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"groupId\": 1,\n    \"description\": \"Pago nuevo usuario\", \n    \"amount\": \"50.0\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/splitbill/groups/1/payments",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "splitbill",
+                "groups",
+                "1",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "List_Payments_Group",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "carlos123",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "carlos",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/splitbill/groups/1/payments",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "splitbill",
+            "groups",
+            "1",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Group Balance",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "carlos123",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "carlos",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/splitbill/groups/1/balance",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "splitbill",
+            "groups",
+            "1",
+            "balance"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "carlos123",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "carlos",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": \"john\",\n    \"userName\": \"John Doe\",\n    \"userPwd\": \"doe\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/splitbill/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "splitbill",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Group",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "carlos123",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "carlos",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"groupId\": 66,\n    \"groupName\": \"TEST_GROUP\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/splitbill/groups",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "splitbill",
+            "groups"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddUserToGroup",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "carlos123",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "carlos",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"groupId\": \"66\",\n    \"userId\": \"john\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/splitbill/groups/88/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "splitbill",
+            "groups",
+            "88",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

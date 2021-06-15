@@ -1,0 +1,13 @@
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/request/PaymentRequest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/Application.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/response/UserPaymentBalanceResponse.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/response/GroupPaymentBalanceResponse.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/response/PaymentResponse.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/security/AuthenticationProviderUserPassword.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/request/CreateGroupRequest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/request/CreateUserRequest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/UserController.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/request/AddUserToGroupRequest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/response/PaymentBalanceResponse.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/GroupController.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/rest/src/main/java/com/autentia/example/splitbill/delivery/rest/GroupPaymentController.java

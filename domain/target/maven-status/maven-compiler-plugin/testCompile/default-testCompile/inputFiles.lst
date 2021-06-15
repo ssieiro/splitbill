@@ -1,0 +1,13 @@
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/payment/PaymentCmdTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/group/CreateGroupCmdTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/user/AddUserCmdTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/persistence/balance/GroupPaymentBalanceRepositoryIT.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/persistence/usergroup/UserGroupRepositoryIT.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/persistence/user/UserRepositoryIT.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/persistence/group/GroupRepositoryIT.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/balance/GroupPaymentsBalanceQryTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/domain/payment/PaymentValidatorTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/persistence/payment/PaymentRepositoryIT.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/group/AddUserToGroupCmdTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/usecase/payment/PaymentFindByGroupQryTest.java
+/Users/soniasieiro/Downloads/splitbill-back-archimedes-java-master/domain/src/test/java/com/autentia/example/splitbill/domain/balance/GroupBalanceCalculatorTest.java

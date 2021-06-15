@@ -1,0 +1,56 @@
+micronaut:
+  application:
+    name: splitbill
+  server:
+    cors:
+      enabled: false
+  router:
+    versioning:
+      enabled: true
+      default-version: 1
+      parameter:
+        enabled: true
+      header:
+        enabled: true
+  security:
+    enabled: true
+    authentication: session
+    intercept-url-map:
+      - pattern: /splitbill/**
+        access:
+          - isAutenticated()
+    basic-auth:
+      enabled: true
+credentials:
+  users:
+    carlos: carlos123
+    pedro: pedro123
+    juan: juan123
+    alfonso: alfonso123
+  roles:
+    carlos: ADMIN
+    pedro: USER
+    juan: USER
+    alfonso: USER
+
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/splitbill
+    username: postgres
+    password: dbpassword
+    driverClassName: org.postgresql.Driver
+    minimumIdle: 1
+    maximumPoolSize: 5
+flyway:
+  datasources:
+    default:
+      locations:
+        - classpath:db/model
+        - classpath:db/sampledata
+logger:
+  levels:
+    root: INFO

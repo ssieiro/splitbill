@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.autentia</groupId>
+		<artifactId>micronaut-java-parent</artifactId>
+		<version>2.2.1</version>
+	</parent>
+
+	<groupId>com.autentia</groupId>
+	<artifactId>splitbill-back-archimedes-java-parent</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>domain</module>
+		<module>rest</module>
+	</modules>
+
+	<properties>
+		<archimedes.version>1.0.0-SNAPSHOT</archimedes.version>
+		<logback.version>1.2.3</logback.version>
+		<postgresql.version>42.2.5</postgresql.version>
+		<mockito.version>3.3.3</mockito.version>
+		<hamcrest.version>2.2</hamcrest.version>
+		<assertj.version>3.16.1</assertj.version>
+		<tiles-maven-plugin.version>2.17</tiles-maven-plugin.version>
+
+		<postgresql-tile.version>1.0.0-SNAPSHOT</postgresql-tile.version>
+
+		<it.archimedes.postgresql.datasource>default</it.archimedes.postgresql.datasource>
+		<it.archimedes.postgresql.host>localhost</it.archimedes.postgresql.host>
+		<it.archimedes.postgresql.db>splitbill</it.archimedes.postgresql.db>
+		<it.archimedes.postgresql.port>5432</it.archimedes.postgresql.port>
+		<it.archimedes.postgresql.user>postgres</it.archimedes.postgresql.user>
+		<it.archimedes.postgresql.password>dbpassword</it.archimedes.postgresql.password>
+		<it.archimedes.postgresql.flyway.locations>classpath:db/model,db/sampledata,db.model,db.sampledata</it.archimedes.postgresql.flyway.locations>
+
+		<docker.image.name>splitbill-back-archimedes-java</docker.image.name>
+		<docker.tag>${project.version}</docker.tag>
+		<docker.from.image>gcr.io/distroless/java:11</docker.from.image>
+<!--		TODO configure docker publish destination -->
+<!--		<docker.to.image>${env.DOCKER_REPOSITORY_URL}${docker.image.name}</docker.to.image>-->
+		<docker.customTag>UNKNOWN</docker.customTag>
+
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>io.repaint.maven</groupId>
+					<artifactId>tiles-maven-plugin</artifactId>
+					<version>${tiles-maven-plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<applyBefore>com.autentia:splitbill-back-archimedes-java-parent</applyBefore>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.archimedes</groupId>
+				<artifactId>arch-bom</artifactId>
+				<version>${archimedes.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgresql.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-runtime</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.archimedes</groupId>
+			<artifactId>arch-usecase-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut.test</groupId>
+			<artifactId>micronaut-test-junit5</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-inline</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>jcenter.bintray.com</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+		<repository>
+			<id>autentia-repository</id>
+			<url>https://autentia.no-ip.org/nexus/repository/maven-releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>autentia-repository-snapshots</id>
+			<url>https://autentia.no-ip.org/nexus/repository/maven-snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

@@ -1,0 +1,6 @@
+com.autentia.example.splitbill.persistence.user.$UserRepositoryITDefinitionClass
+com.autentia.example.splitbill.persistence.balance.$GroupPaymentBalanceRepositoryITDefinitionClass
+com.autentia.example.splitbill.persistence.usergroup.$UserGroupRepositoryITDefinitionClass
+com.autentia.example.splitbill.persistence.payment.$$PaymentRepositoryITDefinition$InterceptedDefinitionClass
+com.autentia.example.splitbill.persistence.payment.$PaymentRepositoryITDefinitionClass
+com.autentia.example.splitbill.persistence.group.$GroupRepositoryITDefinitionClass

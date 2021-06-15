@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: au.com.console:kassava:2.1.0-rc.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/au/com/console/kassava/2.1.0-rc.1/kassava-2.1.0-rc.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/au/com/console/kassava/2.1.0-rc.1/kassava-2.1.0-rc.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/au/com/console/kassava/2.1.0-rc.1/kassava-2.1.0-rc.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

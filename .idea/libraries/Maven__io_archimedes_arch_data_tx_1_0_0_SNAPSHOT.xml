@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.archimedes:arch-data-tx:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx/1.0.0-SNAPSHOT/arch-data-tx-1.0.0-20201018.070428-12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx/1.0.0-SNAPSHOT/arch-data-tx-1.0.0-20201018.070428-12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx/1.0.0-SNAPSHOT/arch-data-tx-1.0.0-20201018.070428-12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,4 @@
+com/autentia/example/splitbill/delivery/rest/$GroupPaymentControllerTestDefinition.class
+com/autentia/example/splitbill/delivery/rest/$GroupPaymentControllerTestDefinitionClass.class
+META-INF/services/io.micronaut.inject.BeanDefinitionReference
+com/autentia/example/splitbill/delivery/rest/GroupPaymentControllerTest.class

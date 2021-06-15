@@ -1,0 +1,5 @@
+com.autentia.example.splitbill.domain.user.$User$IntrospectionRef
+com.autentia.example.splitbill.domain.usergroup.$UserGroup$IntrospectionRef
+com.autentia.example.splitbill.domain.group.$Group$IntrospectionRef
+com.autentia.example.splitbill.domain.usergroup.$UserGroupID$IntrospectionRef
+com.autentia.example.splitbill.domain.payment.$Payment$IntrospectionRef

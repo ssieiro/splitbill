@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.archimedes:arch-data-tx-micronaut:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx-micronaut/1.0.0-SNAPSHOT/arch-data-tx-micronaut-1.0.0-20201018.070540-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx-micronaut/1.0.0-SNAPSHOT/arch-data-tx-micronaut-1.0.0-20201018.070540-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/archimedes/arch-data-tx-micronaut/1.0.0-SNAPSHOT/arch-data-tx-micronaut-1.0.0-20201018.070540-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
